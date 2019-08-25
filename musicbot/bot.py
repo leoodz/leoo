@@ -1878,7 +1878,7 @@ class MusicBot(discord.Client):
             if self.config.embeds:
                 content = self._gen_embed()
                 content.title = 'np'.format(action_text)
-                content.add_field(name='** **', value='{}'.format(np_text), inline=True)
+                content.add_field(name='\u200b', value='{}'.format(np_text), inline=True)
 
 
             self.server_specific_data[guild]['last_np_msg'] = await self.safe_send_message(channel, content if self.config.embeds else np_text, expire_in=30)
